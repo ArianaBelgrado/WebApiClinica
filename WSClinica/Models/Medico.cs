@@ -17,13 +17,16 @@ namespace WSClinica.Models
         [Column(TypeName = "varchar(50)")]
         [Required]
         public string Nombre { get; set; }
+
         public int Matricula { get; set; }
+
+        [Column(TypeName = "date")]
         public DateTime FechaNacimiento { get; set; }
 
         public List<Paciente> Pacientes { get; set; }
 
         public int EspecialidadId { get; set; }
         [ForeignKey("EspecialidadId")]
-        public Especialidad Especialdiad { get; set; }
+        public Especialidad Especialidad { get; set; }
     }
 }

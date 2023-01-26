@@ -1,0 +1,1958 @@
+{
+	"info": {
+		"_postman_id": "7d2cf84f-bb1d-4b2d-bb5a-94aaa4331901",
+		"name": "APIClinica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19200363"
+	},
+	"item": [
+		{
+			"name": "Habitacion",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20511/api/habitacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"habitacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": 25,\r\n    \"estado\": \"disponible\",\r\n    \"clinicaId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20511/api/habitacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"habitacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"habitacionId\": 1,\r\n        \"numero\": 10,\r\n        \"estado\": \"ocupada\",\r\n        \"clinicaId\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20511/api/habitacion/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"habitacion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20511/api/habitacion/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"habitacion",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/habitacion/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"habitacion",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 22:45:10 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20511/api/habitacion/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"habitacion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Especialidad",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20511/api/especialidad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"especialidad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/especialidad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"especialidad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:03:43 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"especialidadId\": 1,\n        \"nombre\": \"Pediatría\",\n        \"medicos\": null\n    },\n    {\n        \"especialidadId\": 2,\n        \"nombre\": \"Ginecologia\",\n        \"medicos\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Ginecologia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20511/api/especialidad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"especialidad"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\":\"Ginecologia\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:20511/api/especialidad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"especialidad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:03:29 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"EspecialidadId\":1,\r\n    \"nombre\":\"Otorrinolaringología\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20511/api/especialidad/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"especialidad",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"EspecialidadId\":1,\r\n    \"nombre\":\"Otorrinolaringología\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:20511/api/especialidad/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"especialidad",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:06:51 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20511/api/especialidad/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"especialidad",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/especialidad/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"especialidad",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:06:28 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"especialidadId\": 1,\n    \"nombre\": \"Pediatría\",\n    \"medicos\": null\n}"
+						},
+						{
+							"name": "get by id post modificación",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/especialidad/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"especialidad",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:07:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"especialidadId\": 1,\n    \"nombre\": \"Otorrinolaringología\",\n    \"medicos\": null\n}"
+						},
+						{
+							"name": "get by id post delete",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/especialidad/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"especialidad",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:08:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20511/api/especialidad/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"especialidad",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/especialidad/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"especialidad",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:08:09 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"especialidadId\": 1,\n    \"nombre\": \"Otorrinolaringología\",\n    \"medicos\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Paciente",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20511/api/paciente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"paciente"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/paciente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"paciente"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:16:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "252"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"pacienteId\": 3,\n        \"nombre\": \"Pablo\",\n        \"apellido\": \"Marmol\",\n        \"medicoId\": 3,\n        \"medico\": null\n    },\n    {\n        \"pacienteId\": 4,\n        \"nombre\": \"Pedro\",\n        \"apellido\": \"Picapiedra\",\n        \"medicoId\": 3,\n        \"medico\": null\n    },\n    {\n        \"pacienteId\": 5,\n        \"nombre\": \"Vilma\",\n        \"apellido\": \"Picapiedra\",\n        \"medicoId\": 3,\n        \"medico\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Vilma\",\r\n    \"apellido\": \"Picapiedra\",\r\n    \"MedicoId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20511/api/paciente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"paciente"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Pablo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Pablo\",\r\n    \"apellido\": \"Marmol\",\r\n    \"MedicoId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:20511/api/paciente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"paciente"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:14:51 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Add Pedro",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Pedro\",\r\n    \"apellido\": \"Picapiedra\",\r\n    \"MedicoId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:20511/api/paciente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"paciente"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:15:32 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Add Vilma",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Vilma\",\r\n    \"apellido\": \"Picapiedra\",\r\n    \"MedicoId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:20511/api/paciente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"paciente"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:15:57 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PacienteId\":3,\r\n    \"nombre\": \"Pablo\",\r\n    \"apellido\": \"Marmol\",\r\n    \"MedicoId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20511/api/paciente/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"paciente",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update to Betty",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"PacienteId\":3,\r\n    \"nombre\": \"Betty\",\r\n    \"apellido\": \"Marmol\",\r\n    \"MedicoId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:20511/api/paciente/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"paciente",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:19:57 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "update to Pablo",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"PacienteId\":3,\r\n    \"nombre\": \"Pablo\",\r\n    \"apellido\": \"Marmol\",\r\n    \"MedicoId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:20511/api/paciente/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"paciente",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:20:53 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20511/api/paciente/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"paciente",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/paciente/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"paciente",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:20:23 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pacienteId\": 3,\n    \"nombre\": \"Betty\",\n    \"apellido\": \"Marmol\",\n    \"medicoId\": 3,\n    \"medico\": null\n}"
+						},
+						{
+							"name": "get by id post update",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/paciente/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"paciente",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:21:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pacienteId\": 3,\n    \"nombre\": \"Pablo\",\n    \"apellido\": \"Marmol\",\n    \"medicoId\": 3,\n    \"medico\": null\n}"
+						},
+						{
+							"name": "get by id post delete",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/paciente/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"paciente",
+										"3"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:22:21 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20511/api/paciente/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20511",
+							"path": [
+								"api",
+								"paciente",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete Pablo",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:20511/api/paciente/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "20511",
+									"path": [
+										"api",
+										"paciente",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:22:05 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pacienteId\": 3,\n    \"nombre\": \"Pablo\",\n    \"apellido\": \"Marmol\",\n    \"medicoId\": 3,\n    \"medico\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pruebas Clinica",
+			"item": [
+				{
+					"name": "INSERT Clinica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"Nombre\" : \"Sanatorio Guemes\",\r\n    \"FechaInicioActividades\" : \"2022-01-01\",\r\n    \"Email\" : \"clinica@buenosaires.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/clinica",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinica"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "INSERT Clinica",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"Nombre\" : \"Sanatorio Guemes\",\r\n    \"FechaInicioActividades\" : \"2022-01-01\",\r\n    \"Email\" : \"clinica@buenosaires.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/clinica",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"clinica"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:11:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "UPDATE Clinica",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"ClinicaId\" : 2, \r\n    \"Nombre\" : \"Clinica la familia\",\r\n    \"FechaInicioActividaes\" : \"2023-01-01\",\r\n    \"Email\" : \"clinica@familia.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/clinica/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinica",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPDATE Clinica",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \r\n    \"ClinicaId\" : 2, \r\n    \"Nombre\" : \"Clinica la familia\",\r\n    \"FechaInicioActividaes\" : \"2023-01-01\",\r\n    \"Email\" : \"clinica@familia.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/clinica/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"clinica",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:19:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "GET Clinica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinica",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinica"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET Clinica",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/clinica",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"clinica"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:10:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"clinicaId\": 1,\n        \"nombre\": \"Hospital Aleman\",\n        \"fechaInicioActividaes\": \"2022-01-01T00:00:00\",\n        \"email\": \"samuelrm08@gmail.com\",\n        \"habitaciones\": null\n    },\n    {\n        \"clinicaId\": 2,\n        \"nombre\": \"Sanatorio Guemes\",\n        \"fechaInicioActividaes\": \"0001-01-01T00:00:00\",\n        \"email\": \"clinica@buenosaires.com\",\n        \"habitaciones\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinica/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinica",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET BY ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/clinica/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"clinica",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:21:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"clinicaId\": 1,\n    \"nombre\": \"Hospital Aleman\",\n    \"fechaInicioActividaes\": \"2022-01-01T00:00:00\",\n    \"email\": \"samuelrm08@gmail.com\",\n    \"habitaciones\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE Clinica",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinica/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinica",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE Clinica",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/clinica/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"clinica",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:21:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"clinicaId\": 1,\n    \"nombre\": \"Hospital Aleman\",\n    \"fechaInicioActividaes\": \"2022-01-01T00:00:00\",\n    \"email\": \"samuelrm08@gmail.com\",\n    \"habitaciones\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pruebas Medico",
+			"item": [
+				{
+					"name": "INSERT Medico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"apellido\" : \"Ianniello\",\r\n    \"nombre\" : \"Rocio\",\r\n    \"matricula\" : 123456,\r\n    \"fechaNacimiento\" : \"1990-01-01\",\r\n    \"especialidadId\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/medico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medico"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "INSERT Medico",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apellido\" : \"Ianniello\",\r\n    \"nombre\" : \"Rocio\",\r\n    \"matricula\" : 123456,\r\n    \"fechaNacimiento\" : \"1990-01-01\",\r\n    \"especialidadId\" : 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/medico",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"medico"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:24:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "UPDATE Medico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"medicoId\" : 1,\r\n    \"apellido\" : \"Giles\",\r\n    \"nombre\" : \"Gabriela\",\r\n    \"matricula\" : 90909,\r\n    \"fechaNacimiento\" : \"2023-01-01\",\r\n    \"especialidadId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/medico/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medico",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPDATE Medico",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"medicoId\" : 1,\r\n    \"apellido\" : \"Giles\",\r\n    \"nombre\" : \"Gabriela\",\r\n    \"matricula\" : 90909,\r\n    \"fechaNacimiento\" : \"2023-01-01\",\r\n    \"especialidadId\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/medico/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"medico",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:26:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "SELECT Medicos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medico"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SELECT Medicos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/medico",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"medico"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:26:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"medicoId\": 1,\n        \"apellido\": \"Giles\",\n        \"nombre\": \"Gabriela\",\n        \"matricula\": 90909,\n        \"fechaNacimiento\": \"2023-01-01T00:00:00\",\n        \"pacientes\": null,\n        \"especialidadId\": 1,\n        \"especialidad\": null\n    },\n    {\n        \"medicoId\": 2,\n        \"apellido\": \"Romero\",\n        \"nombre\": \"Cesar\",\n        \"matricula\": 97876,\n        \"fechaNacimiento\": \"1978-02-21T00:00:00\",\n        \"pacientes\": null,\n        \"especialidadId\": 2,\n        \"especialidad\": null\n    },\n    {\n        \"medicoId\": 3,\n        \"apellido\": \"Giannitta\",\n        \"nombre\": \"Luigi\",\n        \"matricula\": 30000,\n        \"fechaNacimiento\": \"1981-02-21T00:00:00\",\n        \"pacientes\": null,\n        \"especialidadId\": 1,\n        \"especialidad\": null\n    },\n    {\n        \"medicoId\": 4,\n        \"apellido\": \"Ianniello\",\n        \"nombre\": \"Rocio\",\n        \"matricula\": 123456,\n        \"fechaNacimiento\": \"1990-01-01T00:00:00\",\n        \"pacientes\": null,\n        \"especialidadId\": 2,\n        \"especialidad\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "SELECT BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medico/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medico",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SELECT BY ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/medico/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"medico",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:27:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"medicoId\": 1,\n    \"apellido\": \"Giles\",\n    \"nombre\": \"Gabriela\",\n    \"matricula\": 90909,\n    \"fechaNacimiento\": \"2023-01-01T00:00:00\",\n    \"pacientes\": null,\n    \"especialidadId\": 1,\n    \"especialidad\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE Medico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medico/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medico",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE Medico",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/medico/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"medico",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 23 Jan 2023 23:27:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"medicoId\": 1,\n    \"apellido\": \"Giles\",\n    \"nombre\": \"Gabriela\",\n    \"matricula\": 90909,\n    \"fechaNacimiento\": \"2023-01-01T00:00:00\",\n    \"pacientes\": null,\n    \"especialidadId\": 1,\n    \"especialidad\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

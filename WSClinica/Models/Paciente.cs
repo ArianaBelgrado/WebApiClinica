@@ -16,7 +16,11 @@ namespace WSClinica.Models
         [Column(TypeName = "varchar(50)")]
         [Required]
         public string Apellido { get; set; }
-        public int NrioHistClinica { get; set; }
+
+
+        public int MedicoId { get; set; }
+
+        [ForeignKey("MedicoId")]
         public Medico Medico { get; set; }
     }
 }

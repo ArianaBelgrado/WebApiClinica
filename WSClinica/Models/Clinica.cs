@@ -13,10 +13,11 @@ namespace WSClinica.Models
         [Required]
 
         public string Nombre { get; set; }
+        [Column(TypeName = "date")]
         public DateTime FechaInicioActividaes { get; set; }
         [Column(TypeName = "varchar(60)")]
         [Required]
         public string Email { get; set; }
-        public List<Habitacion> Habitaciones { get;set; }
+        public List<Habitacion> Habitaciones { get; set; }
     }
 }

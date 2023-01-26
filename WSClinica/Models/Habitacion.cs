@@ -8,7 +8,7 @@ namespace WSClinica.Models
     {
         public int HabitacionId { get; set; }
 
-        [Range(1,100)]
+        [Range(1, 100)]
         public int Numero { get; set; }
 
         [Column(TypeName = "varchar(50)")]
