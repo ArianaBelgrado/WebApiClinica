@@ -23,7 +23,7 @@ namespace WebApiLibros.Controllers
         }
         // Get
         [HttpGet]
-        public ActionResult<IEnumerable<Libro>> GetClinica()
+        public ActionResult<IEnumerable<Libro>> GetAll()
         {
             return context.Libros.ToList();
         }
