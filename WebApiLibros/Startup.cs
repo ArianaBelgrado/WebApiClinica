@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WebApiLibros.Data;
 
 namespace WebApiLibros
 {
@@ -24,6 +26,8 @@ namespace WebApiLibros
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+             //agregar a nuestro EF para usar inyeccion de dependencia en los api-controller
+            services.AddDbContext<DbLibrosContext>(options => options.UseSqlServer(Configuration.GetConnectionString("KeyDBLibros")));
             services.AddControllers();
         }
 
